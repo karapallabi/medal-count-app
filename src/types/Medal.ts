@@ -1,7 +1,7 @@
 export type Medal = {
   code: string;
   country: string;
-  flag: string; // e.g., 'usa.png'
+  flag: string; 
   gold: number;
   silver: number;
   bronze: number;

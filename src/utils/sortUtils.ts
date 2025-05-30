@@ -1,4 +1,5 @@
 import type { Medal } from '../types/Medal';
+
 export function sortMedals(data: Medal[], sortBy: string): Medal[] {
   const sortFn = {
     total: (a: Medal, b: Medal) =>
@@ -9,6 +10,5 @@ export function sortMedals(data: Medal[], sortBy: string): Medal[] {
     bronze: (a: Medal, b: Medal) => b.bronze - a.bronze || b.gold - a.gold,
   }[sortBy];
 
-  const defaultSortFn = (a: Medal, b: Medal) => b.gold - a.gold || b.silver - a.silver;
-  return [...data].sort(sortFn ?? defaultSortFn);
+  return [...data].sort(sortFn ?? sortFn["gold"]);
 }

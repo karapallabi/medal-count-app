@@ -25,7 +25,7 @@ export default function App() {
   const sortedData = sortMedals(medals, sortBy).slice(0, 10);
 
   return (
-    <div class ="container mt-5 ml-1">
+    <div className ="container mt-5">
       <h1>Medal Count</h1>
       <MedalTable data={sortedData} sortBy={sortBy} onSort={setSortBy} />
     </div>
